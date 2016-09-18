@@ -1,0 +1,38 @@
+.gallery {
+  ul.blocks {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    background-color: #ddd;
+    :first-child {
+      margin-left: 0px;
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul.blocks li {
+    display: inline;
+    height: 150px;
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .row {
+
+    :first-child {
+      text-align: right;
+    }
+    :last-child {
+      text-align: left;
+    }
+
+  }
+
+  .fa.icon {
+    margin-top: 50%;
+
+  }
+}
