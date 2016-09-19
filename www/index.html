@@ -6,8 +6,8 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-<link href="app.7263aa52f4027bc631a3.css" rel="stylesheet"><script type="text/javascript" src="app.7263aa52f4027bc631a3.js"></script></head>
-<body ng-app="TestJob">
+<link href="app.52d7f67c8535a73d0846.css" rel="stylesheet"><script type="text/javascript" src="app.52d7f67c8535a73d0846.js"></script></head>
+<body ng-app="TestJob" ng-controller="MainCtrl as Main">
 <!--
   The nav bar that will be updated as we navigate between views.
 -->
@@ -19,35 +19,15 @@
 -->
 
 <gallery>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
+    <g-img ng-repeat="block in Main.blocks">
+        <img height="{{block.height}}px"
+             width="{{block.width}}px"
+             ng-src="{{block.url}}">
     </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-    <g-img>
-        <img height="150px" src="http://static6.depositphotos.com/1015060/669/i/950/depositphotos_6696479-Green-wooden-block-house.jpg">
-    </g-img>
-
 </gallery>
+<div class="text-center" style="text-align: center;">
+    <span>Сгенерировать </span><input type="number" ng-model="Main.blockCounts">
+</div>
 
 </body>
 </html>
