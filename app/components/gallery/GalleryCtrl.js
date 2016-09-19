@@ -8,16 +8,23 @@ export class GalleryCtrl {
         this.$scope = $scope;
     }
 
-    left() {
-        this.smoothScrollTo(this.scrollableElements.scrollLeft() - 200);
+    left(count) {
+        let offset = count ? count : 200;
+        this.smoothScrollTo(this.scrollableElements.scrollLeft() - offset);
     }
 
-    right() {
-        this.smoothScrollTo(this.scrollableElements.scrollLeft() + 200);
+    right(count) {
+        let offset = count ? count : 200;
+        this.smoothScrollTo(this.scrollableElements.scrollLeft() + offset);
     }
 
     smoothScrollTo(value) {
         this.scrollableElements.stop().animate({scrollLeft: value}, '500', 'swing');
+    }
+
+    wheel($delta) {
+        console.log($delta.wheelDelta);
+        this.scrollableElements.scrollLeft(this.scrollableElements.scrollLeft() + $delta.wheelDelta);
     }
 
 }

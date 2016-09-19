@@ -1,12 +1,11 @@
 import './gallery.scss';
-import 'script!smooth-scrollbar';
-import 'script!angular-smooth-scrollbar';
 import {GalleryCtrl} from './GalleryCtrl';
 import GalleryTemplateUrl from './gallery-template.html';
 import ImgTemplateUrl from './image-template.html';
+import 'angular-mousewheel';
 
 export const Gallery = 'Gallery';
-export default angular.module(Gallery, ['SmoothScrollbar'])
+export default angular.module(Gallery, ['monospaced.mousewheel'])
 
 
     .directive('gallery', [()=> {
