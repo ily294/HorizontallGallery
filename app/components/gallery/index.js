@@ -15,14 +15,7 @@ export default angular.module(Gallery, ['monospaced.mousewheel'])
             scope: {},
             templateUrl: GalleryTemplateUrl,
             controller: GalleryCtrl,
-            controllerAs: 'GalleryCtrl',
-
-
-            compile: (element, attr)=> {
-
-                console.log(element);
-            }
-
+            controllerAs: 'GalleryCtrl'
         }
     }])
 

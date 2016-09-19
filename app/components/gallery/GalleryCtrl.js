@@ -23,7 +23,6 @@ export class GalleryCtrl {
     }
 
     wheel($delta) {
-        console.log($delta.wheelDelta);
         this.scrollableElements.scrollLeft(this.scrollableElements.scrollLeft() + $delta.wheelDelta);
     }
 
