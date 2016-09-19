@@ -2,7 +2,7 @@ export class Block {
     constructor() {
 
         this.url = 'http://cs2.livemaster.ru/storage/b5/83/ec61fb3bbacfe76ca646f23b17cf--materialy-dlya-tvorchestva-foamiran-zefirnyj-zelenyj.jpg';
-        this.width = this.randomInteger(30, 150);
+        this.width = this.randomInteger(100, 200);
         this.height = 200;
     }
 

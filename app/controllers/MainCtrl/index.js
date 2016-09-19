@@ -11,7 +11,6 @@ export class MainCtrl {
             if (value < 0) {
                 self.blockCounts = 0;
             }
-            self.generate(self.blockCounts);
         });
     }
 
@@ -20,6 +19,10 @@ export class MainCtrl {
         for (let i = 0; i < count; i++) {
             this.blocks.push(new Block());
         }
+    }
+
+    draw() {
+        this.generate(this.blockCounts);
     }
 }
 

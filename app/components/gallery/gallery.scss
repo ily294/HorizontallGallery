@@ -1,4 +1,5 @@
 .gallery {
+
   ul.blocks {
     margin: 0;
     padding: 0;
@@ -20,7 +21,6 @@
     margin-left: 10px;
   }
 
-
   .row {
 
     :first-child {
@@ -33,6 +33,7 @@
   }
 
   .fa.icon {
-    margin-top: 100%;
+    position: bsolute;
+    margin-top: 100px;
   }
 }
